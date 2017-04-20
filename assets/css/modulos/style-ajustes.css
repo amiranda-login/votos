@@ -1,0 +1,37 @@
+.tipodes{
+    width: 18%;
+}
+
+.row{
+    margin-bottom: 0px;
+}
+
+.modal-header{
+    background-color: #196028;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
+
+#addMoneda{
+    margin-left: 1%;
+}
+
+.fast-edit{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mrgn{
+    margin-top: 15px;
+}
+
+.card-block {
+    padding: 5px 15px 15px 15px;
+}
+
+.accmodulo {
+    font-size: 1.3em;
+    font-weight: bold;
+}

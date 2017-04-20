@@ -1,0 +1,183 @@
+html{
+    font-family: "logintech";
+}
+
+@font-face {
+  font-family: "logintech";
+  src: url("../fonts/roboto/Roboto-Light.eot") format("embedded-opentype"),
+  /*src: url("Roboto-Regular.eot?#logintech") format("embedded-opentype"),*/
+    url("../fonts/roboto/Roboto-Light.woff") format("woff"),
+    url("../fonts/roboto/Roboto-Light.ttf") format("truetype"),
+    url("../fonts/roboto/Roboto-Light.svg#logintech") format("svg");
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/material-icons/material-icons.eot") format("embedded-opentype"),
+    url("../fonts/material-icons/material-icons.woff") format("woff"),
+    url("../fonts/material-icons/material-icons.ttf") format("truetype"),
+    url("../fonts/material-icons/material-icons.svg#logintech") format("svg");
+  /*src: url("../fonts/material-icons/material-icons.woff") format("woff");*/
+}
+
+/*.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+*/
+
+.border-left {
+  border-left: 1px solid #000;
+}
+
+.border-right {
+  border-right: 1px solid #000;
+}
+
+.cdel:hover {
+  color: #d9534f;
+}
+.blueh:hover {
+  color: #2196F3;
+}
+
+.btn-color {
+  color: #686868;
+}
+
+.pbtn{
+  cursor: pointer;
+  padding: 0 0.3em 0 0.3em;
+}
+
+.bdy {
+  padding-left: 3%;
+  margin-top: 1%;
+  padding-right: 3%;
+  /*background-color: #0B3861;*/
+}
+
+.marginzero {
+  margin: 0;
+}
+.mtopcero {
+  margin-top: 0;
+}
+.mbotcero {
+  margin-bottom: 0;
+}
+.mleftcero {
+  margin-left: 0;
+}
+.mrightcero {
+  margin-right: 0;
+}
+
+.autocomplete-content{
+    z-index: 3000;
+    position: fixed;
+}
+
+.inv{
+    display: none;
+}
+@media(max-width:766px) {
+    .bdy {
+    padding-left: 2%;
+    margin-top: 2%;
+    font-family: "logintech";
+    }
+}
+.der {
+    float: right;
+}
+.eder {
+    text-align: right;
+}
+.but {
+    cursor: pointer;
+}
+body {
+    background-color: #e9e9e9;
+}
+.asterisco {
+    color: red;
+}
+@-moz-keyframesspin {
+    0% {
+    -moz-transform: rotate(0);
+}
+100% {
+    -moz-transform: rotate(359deg);
+}
+}
+@-webkit-keyframesspin {
+    0% {
+    -webkit-transform: rotate(0);
+}
+100% {
+    -webkit-transform: rotate(359deg);
+}
+}
+@-o-keyframesspin {
+    0% {
+    -o-transform: rotate(0);
+}
+100% {
+    -o-transform: rotate(359deg);
+}
+}
+@-ms-keyframesspin {
+    0% {
+    -ms-transform: rotate(0);
+}
+100% {
+    -ms-transform: rotate(359deg);
+}
+}
+@keyframesspin {
+    0% {
+    transform: rotate(0);
+}
+100% {
+    transform: rotate(359deg);
+}
+}
+[data-notify="progressbar"] {
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+[data-notify="icon"] {
+    height: 50px;
+    margin-right: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2em;
+    /*background: rgba(51,51,51,0.1);*/
+    border-radius: 50%;
+    padding: 1%;
+}
+[data-notify="title"] {
+    color: #686868;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+[data-notify="message"] {
+    font-size: 80%}
