@@ -1,5 +1,5 @@
 <?php 
 
-	header("location: dashboard");
+	header("Location: mivoto.php");
 	
 ?>
