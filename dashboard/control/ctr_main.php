@@ -11,9 +11,11 @@
 	   	$sty = $smarty->fetch('../view/style.php');
 	   	$scr = $smarty->fetch('../view/script.php');
 	    
-	   	$smarty->assign('NAV',$pg);
 	   	$smarty->assign('STY',$sty);
 	   	$smarty->assign('SCR',$scr);
+	   	$smarty->assign('NAV',$pg);
+
+	   	$smarty->assign('VOT',$kakaroto->kamehameha('id,nombre',1,'id > 0 order by fecha_inicio'));
 	   	$smarty->display('v_main.tpl');
 	   }else{
 	   $pagina = 0;

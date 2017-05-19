@@ -41,8 +41,12 @@
 	   	\$smarty  = new mySmarty();
 	   	\$smarty->setModule('dashboard');
 	   	\$pg = \$smarty->fetch('../view/menuSmarty.php');
-	   
-	   	\$smarty->assign('NAV',\$pg);
+	    \$sty = \$smarty->fetch('../view/style.php');
+        \$scr = \$smarty->fetch('../view/script.php');
+        
+        \$smarty->assign('NAV',\$pg);
+        \$smarty->assign('STY',\$sty);
+        \$smarty->assign('SCR',\$scr);
 	   	\$smarty->display('v_".$modulo.".tpl');
 	   }else{
 	   \$pagina = 0;
@@ -50,16 +54,7 @@
 	   		case 1:
 
 	   			break;
-	   		case 2:
-
-	   			break;
-	   		case 3:
-	   			
-	   			break;
-	   		case 4:
-	   			
-	   			break;
-	   		case 5:
+	   		default:
 	   			
 	   			break;
 	   	}
@@ -86,24 +81,6 @@
  			if (is_file("dashboard/control/ctr_".$modulo.".php")) 
  				echo "Archivo Controlador Creado<br>";
 
- 	/* 		$nuevoarchivo = fopen("dashboard/model/m_".$modulo.".php", "w+"); 
-
-// 			$contenido = "<?php 
-				
-// 	require_once '../_config/RUD.php';
-
-// 	class _".$modulo." extends RUD
-// 	{
-		
-// 	}
-			
-// ?>";
-
-			fwrite($nuevoarchivo,$contenido); 
-			fclose($nuevoarchivo);
-			if (is_file("dashboard/model/m_".$modulo.".php")) 
-				echo "Archivo Modelo Creado<br>";*/
-
 			$nuevoarchivo = fopen("dashboard/view/v_".$modulo.".tpl", "w+"); 
 			
 			$contenido = "<!DOCTYPE html>
@@ -124,12 +101,14 @@
       <script src=\"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>
     <![endif]-->
   </head>
+  {\$STY}
   <body>
   <br>
     {\$NAV}
     <div class=\"bdy\">
 
     </div>
+    {\$SCR}
     <script src=\"../assets/js/modulos/".$modulo.".js\"></script>
   </body>
 </html>";

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.17, created on 2017-03-29 17:05:54
+<?php /* Smarty version 2.6.17, created on 2017-05-19 01:25:04
          compiled from v_usuarios.tpl */ ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -8,13 +8,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-Control" content="max-age=86400"/>
 <title>Usuarios</title>
+<?php echo $this->_tpl_vars['STY']; ?>
+
 <link rel="stylesheet" type="text/css" href="../assets/css/modulos/style-usuarios.css">
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+
 </head>
 
 <body>
@@ -43,6 +40,8 @@
 <!-- //modal-mail// -->
 
 </div>
+<?php echo $this->_tpl_vars['SCR']; ?>
+
 <script src="../assets/js/modulos/usuarios.js?v=1.0"></script>
 
 </body>

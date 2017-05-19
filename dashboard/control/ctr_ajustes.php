@@ -8,8 +8,11 @@
 	   	$smarty  = new mySmarty();
 	   	$smarty->setModule('dashboard');
 	   	$pg = $smarty->fetch('../view/menuSmarty.php');
-	   
-	   	
+	   	$sty = $smarty->fetch('../view/style.php');
+	   	$scr = $smarty->fetch('../view/script.php');
+	    
+	   	$smarty->assign('STY',$sty);
+	   	$smarty->assign('SCR',$scr);
 	   	$smarty->assign('NAV',$pg);
 	   	$smarty->display('v_ajustes.tpl');
 	   }else{

@@ -12,7 +12,7 @@
     	if (isset($_POST['pss'])) {
 
     		require_once '../_config/ecy.php';
-    		$log->ini($_POST['usr'],$_POST['pss']);
+    		$log->ini($_POST['usr']);
 		    $encrypt = new _cy();
 
 		    $user = $log->autenticar();
@@ -20,24 +20,13 @@
 		    	print_r($user);
 		    }else if (sizeof($user) == 1)
 		    {
-
-          if($user[0][6] == '')
-            header("Location: ../bienvenida/bienvenida.html");
-          else{
-            if ($user[0][7] == 0)
-              cambioDia($log);
-
               $_SESSION['USR']     = trim($encrypt->ency($user[0][0]));
               $_SESSION['NUM']     = trim($encrypt->ency($user[0][1]));
               $_SESSION['NOM']     = $user[0][2];
               $_SESSION['TIPO']    = $user[0][3];
-              $_SESSION['EMPRESA'] = $user[0][4];
-              $_SESSION['IMPRESA'] = $user[0][5];
-              $_SESSION['TMP_CIA'] = 0;
               
               $vdir = $_POST['vdir'] == '' || $_POST['vdir'] == 'logout' ? 'main' : $_POST['vdir'];
               header("Location: ../dashboard/$vdir");
-           }
   
 		   }
     	}else{
@@ -66,7 +55,7 @@
    			$transaccion = $log->mantenimiento($_POST['arreglo']);
    			break;
    		case 3:
-   			$log->ini($_POST['arreglo']['user'],$_POST['arreglo']['pss']);
+   			$log->ini($_POST['arreglo']['user']);
    			$transaccion = $log->autenticar();
    			break;
    		case 4:

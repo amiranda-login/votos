@@ -77,16 +77,16 @@
 
 		function autenticar() {
 	
-			$this->sql = "CALL sp_Login('$this->user','$this->pass')";
+			$this->sql = "CALL sp_Login('$this->user')";
 
 			$resul = $this->ejecutarSelect();
 			
 			return $resul;
 		}
 
-		function ini($id,$pss){
+		function ini($id){
 			$this->user = $id;
-			$this->pass = $pss;
+			$this->pass = '';
 		}
 	}
 			
