@@ -19,6 +19,6 @@ $(function(){
                 .done(function(data) {
                 });
         Materialize.toast('Gracias por tu Voto, Recuerda es Secreto...',4000,'green');
-        
+        setTimeout(function(){location.reload()},4000);
     })
 })

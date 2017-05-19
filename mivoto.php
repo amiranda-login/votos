@@ -1,6 +1,11 @@
 <?php 
   require_once '_config/mysqlDB.php'; 
   $db = new DBClass();
+
+  if (isset($_POST['id'])) {
+    $db->ejecutar("update detallevotaciones set votos = votos+1 where idvotacion = 1 and idcandidato = ".$_POST['id']." limit 1");
+  }else{
+
 ?>
 
 <!DOCTYPE html>
@@ -64,7 +69,7 @@
             <div class="card-image">
               <img src="<?php echo $obj[2]; ?>">
               <span class="card-title"><?php echo $obj[1]; ?></span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red right" id="v<?php echo $obj[0]; ?>"><i class="fa fa-thumbs-up"></i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light red right" title="Vota por mi" id="v<?php echo $obj[0]; ?>"><i class="fa fa-thumbs-up"></i></a>
             </div>
             <div class="card-content">
               <p><?php echo $obj[3]; ?></p>
@@ -94,3 +99,5 @@
   </body>
 
 </html>
+
+<?php } ?>

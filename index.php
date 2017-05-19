@@ -1,5 +1,5 @@
 <?php 
 
-	header("Location: mivoto.php");
+	require 'mivoto.php';
 	
 ?>

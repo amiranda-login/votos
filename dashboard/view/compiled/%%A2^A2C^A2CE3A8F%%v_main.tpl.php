@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.17, created on 2017-05-19 03:13:10
+<?php /* Smarty version 2.6.17, created on 2017-05-19 07:34:35
          compiled from v_main.tpl */ ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -48,15 +48,22 @@ $this->_sections['LE']['index_next'] = $this->_sections['LE']['index'] + $this->
 $this->_sections['LE']['first']      = ($this->_sections['LE']['iteration'] == 1);
 $this->_sections['LE']['last']       = ($this->_sections['LE']['iteration'] == $this->_sections['LE']['total']);
 ?>
-      <li>
-        <div class="collapsible-header">Cantidad de Votos: <span class="new badge">0</span><i class="material-icons">filter_drama</i>input</div>
-        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+      <li id="li<?php echo $this->_tpl_vars['VOT'][$this->_sections['LE']['index']][0]; ?>
+">
+        <div class="collapsible-header"><?php echo $this->_tpl_vars['VOT'][$this->_sections['LE']['index']][1]; ?>
+<span class="new badge" data-badge-caption="votos" id="ajaxvotos">0</span><i class="material-icons">input</i></div>
+        <div class="collapsible-body" id="v<?php echo $this->_tpl_vars['VOT'][$this->_sections['LE']['index']][0]; ?>
+">
+          <canvas class="charts" id="chartG1" width="100%" height="50"></canvas>
+        </div>
       </li>
     <?php endfor; endif; ?>
     </ul>
 
     </div>
+    
     <?php echo $this->_tpl_vars['SCR']; ?>
 
+    <script type="text/javascript" src="../assets/js/modulos/main.js"></script>
   </body>
 </html>

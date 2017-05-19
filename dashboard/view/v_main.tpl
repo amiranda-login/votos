@@ -21,14 +21,18 @@
       </ul>
     <ul class="collapsible" data-collapsible="accordion">
     {section name=LE loop=$VOT}
-      <li>
-        <div class="collapsible-header">Cantidad de Votos: <span class="new badge">0</span><i class="material-icons">filter_drama</i>input</div>
-        <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+      <li id="li{$VOT[LE][0]}">
+        <div class="collapsible-header">{$VOT[LE][1]}<span class="new badge" data-badge-caption="votos" id="ajaxvotos">0</span><i class="material-icons">input</i></div>
+        <div class="collapsible-body" id="v{$VOT[LE][0]}">
+          <canvas class="charts" id="chartG1" width="100%" height="50"></canvas>
+        </div>
       </li>
     {/section}
     </ul>
 
     </div>
+    
     {$SCR}
+    <script type="text/javascript" src="../assets/js/modulos/main.js"></script>
   </body>
 </html>
