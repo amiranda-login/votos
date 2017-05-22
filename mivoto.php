@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/modulos/style-menu.css">
     <link rel="stylesheet" type="text/css" href="assets/fonts/material-icons.css">
     <link rel="stylesheet" type="text/css" href="assets/css/system.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/modulos/style-mivoto.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/modulos/style-mivoto.css?v=0.1">
     
   </head>
   <body>
@@ -41,7 +41,7 @@
         </div>
         <div class="input-field col s12 hide">
             <input id="pass" type="password" name="pss" class="validate" style="height: 40px; font-size: 20px; padding-left: 2%; margin-top: 2%">
-            <label for="pass" class="white-text"><b>Seccións</b></label>
+            <label for="pass" class="white-text"><b>Sección</b></label>
         </div>
         <div class="row">
             <div class="col s12"><br>
@@ -67,14 +67,16 @@
 
           <div class="card">
             <div class="card-image">
-              <img src="<?php echo $obj[2]; ?>">
-              <span class="card-title"><?php echo $obj[1]; ?></span>
+              <img src="<?php echo $obj[2]; ?>" style="width: auto;float: right;">
+              <!-- <span class="card-title"></span> -->
               <a class="btn-floating halfway-fab waves-effect waves-light red right" title="Vota por mi" id="v<?php echo $obj[0]; ?>"><i class="fa fa-thumbs-up"></i></a>
             </div>
-            <div class="card-content">
-              <p><?php echo $obj[3]; ?></p>
-              <p><?php echo $obj[4]; ?></p>
+            <div class="card-content" style="height: 250px;">
+              <p><h5><?php echo $obj[1]; ?></h5></p>
+              <p><h5><?php echo $obj[3]; ?></h5></p>
+              <p><img src="<?php echo $obj[4]; ?>" style="width: auto; height: 100px"></p>
             </div>
+
           </div>
 
           </div>
