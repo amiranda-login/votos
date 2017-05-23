@@ -29,15 +29,15 @@
   </head>
   <body>
     
-     <div id="shows" class="card" style="width: 340px; margin: 0 auto; min-width: 350px; margin-top: 2%; background-color: rgba(11,56,97,0.7); display: none;z-index: 1000; "> 
+     <div id="shows" class="card" style="width: 340px; margin: 0 auto; min-width: 350px; margin-top: 2%;  display: none;z-index: 1000; "> 
      <br>  
-     <div class="card-header"><p class="flow-text center white-text"><b>Vamos a Votar!!!</b></p></div>
+     <div class="card-header"><p class="flow-text center"><b>Vamos a Votar!!!</b></p></div>
 
         <div class="row">
         <div class="input-field col s12">
         
-            <input id="user" type="text" class="validate" style="height: 40px; font-size: 20px; padding-left: 2%; margin-top: 2%">
-            <label for="user" class="white-text"><b>Ingrese su Cédula</b></label>
+            <input id="user" type="text" style="height: 40px; font-size: 20px; padding-left: 2%; margin-top: 2%;border: 1px solid black">
+            <label for="user"><b>Ingrese su Cédula</b></label>
         </div>
         <div class="input-field col s12 hide">
             <input id="pass" type="password" name="pss" class="validate" style="height: 40px; font-size: 20px; padding-left: 2%; margin-top: 2%">
@@ -50,6 +50,8 @@
 
         </div>
         </div>
+        <div class="center"><img src="assets/img/escudo.jpg" class="responsive-img"></div>
+        
     </div>
 
     <div id="bdy" class="hide">
