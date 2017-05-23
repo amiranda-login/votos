@@ -33,6 +33,6 @@
     </div>
     
     {$SCR}
-    <script type="text/javascript" src="../assets/js/modulos/main.js"></script>
+    <script type="text/javascript" src="../assets/js/modulos/main.js?v=0.1"></script>
   </body>
 </html>
