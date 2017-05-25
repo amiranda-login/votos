@@ -8,6 +8,7 @@ $(function(){
     })
 
     $("[id^=v]").click(function(){
+        $("[id^=v]").prop('disabled',true);
         var vid = $(this).attr('id').substr(1);
         var vced = $("#user").val().replace(/-/g,'');
 

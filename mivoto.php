@@ -31,7 +31,7 @@
     
      <div id="shows" class="card" style="width: 340px; margin: 0 auto; min-width: 350px; margin-top: 2%;  display: none;z-index: 1000; "> 
      <br>  
-     <div class="card-header"><p class="flow-text center"><b>Vamos a Votar!!!</b></p></div>
+     <div class="card-header"><p class="flow-text center"><b>Elecciones Estudiantes <?php echo date('Y') ?></b></p></div>
 
         <div class="row">
         <div class="input-field col s12">
